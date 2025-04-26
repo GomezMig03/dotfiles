@@ -1,0 +1,5 @@
+  Cylinder
+Generate ▸ Solidify
+Generate ▸ Subdivision Surface
+Generate ▸ Boolean
+Generate ▸ Bevel
