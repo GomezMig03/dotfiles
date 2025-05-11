@@ -1,6 +1,7 @@
 /* ----------- 💫 https://github.com/JaKooLit 💫 -------- */
 /* .............Purpl..................... */
 /* --- 👍 designed by https://github.com/Krautt  👍 --- */
+@import "macchiato.css";
 
 * {
 	font-family: "JetBrainsMono Nerd Font";
@@ -12,8 +13,8 @@
 }
 
 window#waybar {
-	background: #100214;
-	color: #cba6f7;
+	background: rgba(0,0,0,0);
+	color: @text;
 }
 
 window#waybar.hidden {
@@ -31,16 +32,18 @@ tooltip {
 
 /*-----module groups----*/
 .modules-right {
-	border: 3px solid #20052a;
+	border: 3px solid rgba(245, 168, 127, 0.7);
 	border-radius: 100px 0px 0px 0px;
-	background-color: #3d174b;
+	background-color: @base;
 	padding-top: 2px;
 	padding-bottom: 2px;
 	padding-right: 5px;
-	padding-left: 5px;
+	padding-left: 15px;
 }
 
 .modules-center {
+	border: 3px solid rgba(245, 168, 127, 0.7);
+	background-color: @base;
 	padding-top: 2px;
 	padding-bottom: 2px;
 	padding-right: 4px;
@@ -49,18 +52,18 @@ tooltip {
 
 .modules-left {
 	/*background-color: #1e1e2e;*/
-	border: 3px solid #20052a;
+	border: 3px solid rgba(245, 168, 127, 0.7);
 	border-radius: 0px 0px 100px 0px;
-	background-color: #441a53;
+	background-color: @base;
 	padding-top: 2px;
 	padding-bottom: 2px;
-	padding-right: 5px;
+	padding-right: 15px;
 	padding-left: 5px;
 }
 
 #taskbar button,
 #workspaces button {
-	color: #6E6A86;
+	color: @pink;
     box-shadow: none;
 	text-shadow: none;
     padding: 0px;
@@ -72,7 +75,7 @@ tooltip {
 }
 
 #workspaces button.active {
-	color: #cba6f7;
+	color: @peach;
 	border-radius: 20%;
 	background-color: black;
     padding-left: 8px;
