@@ -1,0 +1,1 @@
+Based on [JaKooLit's Hyprland dotfiles](https://github.com/JaKooLit/Hyprland-Dots)
