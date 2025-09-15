@@ -28,6 +28,7 @@ view/edit Window Rules
 view/edit User Keybinds
 view/edit User Settings
 view/edit Startup Apps
+Choose Waybar Styles
 view/edit Decorations
 view/edit Animations
 view/edit Laptop Keybinds
@@ -44,7 +45,6 @@ Choose Rofi Themes
 Search for Keybinds
 Toggle Game Mode
 Switch Dark-Light Theme
-Choose Waybar Styles
 EOF
 }
 
@@ -60,6 +60,7 @@ main() {
         "view/edit User Keybinds") file="$UserConfigs/UserKeybinds.conf" ;;
         "view/edit User Settings") file="$UserConfigs/UserSettings.conf" ;;
         "view/edit Startup Apps") file="$UserConfigs/Startup_Apps.conf" ;;
+	"Choose Waybar Styles") $scriptsDir/WaybarStyles.sh ;;
         "view/edit Decorations") file="$UserConfigs/UserDecorations.conf" ;;
         "view/edit Animations") file="$UserConfigs/UserAnimations.conf" ;;
         "view/edit Laptop Keybinds") file="$UserConfigs/Laptops.conf" ;;
@@ -101,7 +102,6 @@ main() {
         "Search for Keybinds") $scriptsDir/KeyBinds.sh ;;
         "Toggle Game Mode") $scriptsDir/GameMode.sh ;;
         "Switch Dark-Light Theme") $scriptsDir/DarkLight.sh ;;
-	"Choose Waybar Styles") $scriptsDir/WaybarStyles.sh ;;
         *) return ;;  # Do nothing for invalid choices
     esac
 
