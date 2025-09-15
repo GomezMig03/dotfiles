@@ -44,6 +44,7 @@ Choose Rofi Themes
 Search for Keybinds
 Toggle Game Mode
 Switch Dark-Light Theme
+Choose Waybar Styles
 EOF
 }
 
@@ -100,6 +101,7 @@ main() {
         "Search for Keybinds") $scriptsDir/KeyBinds.sh ;;
         "Toggle Game Mode") $scriptsDir/GameMode.sh ;;
         "Switch Dark-Light Theme") $scriptsDir/DarkLight.sh ;;
+	"Choose Waybar Styles") $scriptsDir/WaybarStyles.sh ;;
         *) return ;;  # Do nothing for invalid choices
     esac
 
