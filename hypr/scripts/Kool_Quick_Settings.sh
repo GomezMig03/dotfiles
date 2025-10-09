@@ -46,6 +46,7 @@ Choose Rofi Themes
 Search for Keybinds
 Toggle Game Mode
 Switch Dark-Light Theme
+Toggle Rofi Beats
 EOF
 }
 
@@ -104,6 +105,7 @@ main() {
         "Search for Keybinds") $scriptsDir/KeyBinds.sh ;;
         "Toggle Game Mode") $scriptsDir/GameMode.sh ;;
         "Switch Dark-Light Theme") $scriptsDir/DarkLight.sh ;;
+	"Toggle Rofi Beats") $UserScripts/RofiBeats.sh ;;
         *) return ;;  # Do nothing for invalid choices
     esac
 
