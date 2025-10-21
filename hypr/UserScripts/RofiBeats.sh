@@ -29,7 +29,7 @@ declare -A online_music=(
   ["YT - lofi hip hop radio 💤 beats to sleep/chill to"]="https://www.youtube.com/watch?v=28KRPhVzCus"
   ["YT - Relaxing Piano Jazz Music 🎹🎶"]="https://youtu.be/85UEqRat6E4?si=jXQL1Yp2VP_G6NSn"
   ["YT - Vocaloid Classics (2007-2013)"]="https://www.youtube.com/playlist?list=PLQErzTgKx_V2mh8OaJl73e9MoVAY2dEH8"
-  ["YT - Genshin Impact Lofi Music"]="https://www.youtube.com/watch?v=NliTy5bwjlg&list=RDNliTy5bwjlg"
+  ["YT - Genshin Impact Lofi Music"]="https://www.youtube.com/playlist?list=PL3gdxvd8Ra0wTUIp89afEEfqZRCsb8O_H"
 )
 
 # Populate local_music array with files from music directory and subdirectories
