@@ -19,7 +19,7 @@
 	"format-icons": [
 		"󰈸"
 	],
-	"on-click-right": "$HOME/.config/hypr/scripts/WaybarScripts.sh --nvtop"
+	"on-click-right": "btop"
 },
 
 "backlight": {
