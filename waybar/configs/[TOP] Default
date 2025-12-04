@@ -45,6 +45,8 @@
 	"network#speed",
 	"custom/separator#dot-line",
 	"group/mobo_drawer",
+	"custom/separator#dot-line",
+	"bluetooth",
 	"custom/separator#line",  
 	"group/audio",
 	"custom/separator#dot-line", 
