@@ -139,7 +139,7 @@ modify_startup_config() {
   # Check if it's a live wallpaper (video)
   if [[ "$selected_file" =~ \.(mp4|mkv|mov|webm)$ ]]; then
     # For video wallpapers:
-    sed -i '/^\s*exec-once\s*=\s*swww-daemon\s*--format\s*xrgb\s*$/s/^/\#/' "$startup_config"
+    #sed -i '/^\s*exec-once\s*=\s*swww-daemon\s*--format\s*xrgb\s*$/s/^/\#/' "$startup_config"
     sed -i '/^\s*#\s*exec-once\s*=\s*mpvpaper\s*.*$/s/^#\s*//;' "$startup_config"
 
     # Update the livewallpaper variable with the selected video path (using $HOME)
@@ -149,7 +149,7 @@ modify_startup_config() {
     echo "Configured for live wallpaper (video)."
   else
     # For image wallpapers:
-    sed -i '/^\s*#\s*exec-once\s*=\s*swww-daemon\s*--format\s*xrgb\s*$/s/^\s*#\s*//;' "$startup_config"
+    #sed -i '/^\s*#\s*exec-once\s*=\s*swww-daemon\s*--format\s*xrgb\s*$/s/^\s*#\s*//;' "$startup_config"
 
     sed -i '/^\s*exec-once\s*=\s*mpvpaper\s*.*$/s/^/\#/' "$startup_config"
 
@@ -165,10 +165,10 @@ apply_image_wallpaper() {
 
   if ! pgrep -x "swww-daemon" >/dev/null; then
     echo "Starting swww-daemon..."
-    swww-daemon --format xrgb &
+    #swww-daemon --format xrgb &
   fi
 
-  swww img -o "$focused_monitor" "$image_path" $SWWW_PARAMS
+  #swww img -o "$focused_monitor" "$image_path" $SWWW_PARAMS
 
   # Run additional scripts
   "$SCRIPTSDIR/WallustSwww.sh"
