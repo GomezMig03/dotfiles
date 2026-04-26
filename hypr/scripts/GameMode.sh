@@ -22,12 +22,12 @@ if [ "$HYPRGAMEMODE" = 1 ] ; then
         keyword decoration:rounding 0"
 	
 \thyprctl keyword "windowrule opacity 1 override 1 override 1 override, ^(.*)$"
-    "$WWW_CMD" kill 
+    awww kill 
     notify-send -e -u low -i "$notif" " Gamemode:" " enabled"
     sleep 0.1
     exit
 else
-\t"$WWW_DAEMON" "${WWW_DAEMON_ARGS[@]}" && "$WWW_CMD" img "$HOME/.config/rofi/.current_wallpaper" &
+awww-daemon --format xrgb &
 	sleep 0.1
 	${SCRIPTSDIR}/WallustSwww.sh
 	sleep 0.5
