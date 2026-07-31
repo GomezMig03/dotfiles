@@ -181,16 +181,27 @@ apply_image_wallpaper() {
 
 apply_video_wallpaper() {
   local video_path="$1"
+  local gif_path="${video_path%.*}.gif"
 
   # Check if mpvpaper is installed
   if ! command -v mpvpaper &>/dev/null; then
-    notify-send -i "$iDIR/error.png" "E-R-R-O-R" "mpvpaper not found"
-    return 1
-  fi
-  kill_wallpaper_for_video
+    notify-send "Wallpaper" "mpvpaper not found, trying to convert video to gif"
 
-  # Apply video wallpaper using mpvpaper
-  mpvpaper '*' -o "load-scripts=no no-audio --loop" "$video_path" &
+    kill_wallpaper_for_image
+
+  	if ! pgrep -x "awww-daemon" >/dev/null; then
+    		echo "Starting awww-daemon..."
+    		awww-daemon --format xrgb &
+  	fi
+	if [ ! -f "$gif_path" ]; then
+    		ffmpeg -i "$video_path" "$gif_path"
+    		awww img -o "$focused_monitor" "$gif_path" $SWWW_PARAMS
+  	fi
+
+  else
+    kill_wallpaper_for_video
+    mpvpaper '*' -o "load-scripts=no no-audio --loop" "$video_path" &
+  fi
 }
 
 # Main function
