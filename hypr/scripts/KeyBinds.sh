@@ -21,7 +21,7 @@ mainMod=$(cat $keybinds_conf | grep "local mainMod" | awk -F'"' '{print $2}')
 keybinds=$(cat "$keybinds_conf" "$user_keybinds_conf" | grep -v "\--" | grep -v "local" | tr -d '\t\n' | grep -oP 'hl\.bind\(\K[^,]+' | sed "s/mainMod/$mainMod/g" | sed 's/\.\. " //g' | sed 's/\"//g')
 actions=$(cat "$keybinds_conf" "$user_keybinds_conf" | grep -v "\--" | grep -v "local" | tr -d '\t\n' | grep -oP '(?<=\",).*?(?=hl\.bind)')
 
-pair=$(paste -d '=' <(echo "$keybinds") <(echo "$actions") | sed 's/\=/ \-\>/g';)
+pair=$(paste -d '=' <(echo "$keybinds") <(echo "$actions") | sed 's/\=/ \-\>/';)
 
 #TODO: add the last action to the list, currectly it isn't displayed at there isn't a hl.bind after the end
 
