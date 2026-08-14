@@ -1,20 +1,18 @@
 #!/bin/bash
-# /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  ##
+# /* https://github.com/GomezMig03 */  ##
 # Rofi menu for KooL Hyprland Quick Settings (SUPER SHIFT E)
 
 # Modify this config file for default terminal and EDITOR
 config_file="$HOME/.config/hypr/UserConfigs/01-UserDefaults.lua"
 
-tmp_config_file=$(mktemp)
-sed 's/^\$//g; s/ = /=/g' "$config_file" > "$tmp_config_file"
-source "$tmp_config_file"
-# ##################################### #
+term=$(cat $config_file | grep "local term" | awk -F'"' '{print $2}')
+edit=$(cat $config_file | grep "EDITOR" | head -1 | awk -F'"' '{print $4}')
 
 # variables
 configs="$HOME/.config/hypr/configs"
 UserConfigs="$HOME/.config/hypr/UserConfigs"
 rofi_theme="$HOME/.config/rofi/config-edit.rasi"
-msg=' ⁉️ Choose what to do ⁉️'
+msg='Choose an action'
 iDIR="$HOME/.config/swaync/images"
 scriptsDir="$HOME/.config/hypr/scripts"
 UserScripts="$HOME/.config/hypr/UserScripts"
