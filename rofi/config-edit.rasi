@@ -1,5 +1,5 @@
-/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
-/* KooL Hyprland Edit Rofi Config */
+/* https://github.com/GomezMig03 */
+/* Hyprland Edit Rofi Config */
 
 @import "~/.config/rofi/config.rasi"  
 
@@ -28,14 +28,14 @@ listview {
   lines: 6;
   fixed-height: false;
   scrollbar: true;
-  spacing: 6px;
+  spacing: 5px;
   cycle: true;
 }
 
 /* ---- Entry input ---- */
 entry {
   expand: true;
-  placeholder: " 💫  Customize KooL Hyprland  💫";
+  placeholder: "Edit Hyprland";
   horizontal-align: 0.5;
 }
 
@@ -46,7 +46,7 @@ element {
 }
 
 element-icon {
-  size: 0%;
+  size: 1%;
 }
 element-text {
   horizontal-align: 0.0;
